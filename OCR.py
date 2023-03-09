@@ -13,7 +13,7 @@ def convert_image_to_text(file):
 def get_text_from_any_pdf(pdf_file):
     images = convert_pdf_to_img(pdf_file)
     final_text = ""
-    pdf_path = "D:\\TCS_MainDocs\\Medha_1stCompanyDocs\\"
+    pdf_path = "\\Docs\\"
     for index, image in enumerate(images):
         image.save(f'output/{pdf_path}-{index}.png')
 
@@ -22,12 +22,12 @@ def get_text_from_any_pdf(pdf_file):
     return final_text
 
 def text():
-    pages = convert_from_path("D:\\TCS_MainDocs\\Medha_1stCompanyDocs\\JunePaySlip.pdf", 500)
+    pages = convert_from_path("D:\\doc.pdf", 500)
     for page in pages:
         page.save('out.jpg', 'JPEG')
 #text()
-finalwords=get_text_from_any_pdf("D:\\TCS_MainDocs\\Medha_1stCompanyDocs\\OfferLetter_MEDHA(1stCompany).pdf")
-with open('D:\\TCS_MainDocs\\EducationalDocs\\readme1.txt', 'w') as f:
+finalwords=get_text_from_any_pdf("D:\\Doc.pdf")
+with open('D:\\EducationalDocs\\readme1.txt', 'w') as f:
     f.write(finalwords)
 f.close()    
   
